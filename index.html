@@ -1,0 +1,243 @@
+<!DOCTYPE html><html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Midnight Corner Cafe</title><style>
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@300;400;500&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+
+body{
+font-family:Inter, sans-serif;
+background:#0b0f1a;
+color:#f3e7c5;
+line-height:1.6;
+}
+
+header{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 8%;
+border-bottom:1px solid #3b2c12;
+}
+
+header h1{
+font-family:"Playfair Display",serif;
+letter-spacing:1px;
+}
+
+nav a{
+color:#e8d8a8;
+text-decoration:none;
+margin-left:25px;
+font-size:14px;
+transition:.3s;
+}
+
+nav a:hover{color:#ffd36b}
+
+.hero{
+min-height:80vh;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:60px 8%;
+}
+
+.hero-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+max-width:1100px;
+}
+
+.hero h2{
+font-family:"Playfair Display",serif;
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+opacity:.85;
+margin-bottom:25px;
+}
+
+button{
+padding:12px 22px;
+background:#f4c35a;
+border:none;
+border-radius:8px;
+font-weight:500;
+cursor:pointer;
+}
+
+button:hover{background:#ffd36b}
+
+.special{
+background:#1a2236;
+padding:30px;
+border-radius:16px;
+box-shadow:0 15px 40px rgba(0,0,0,.6);
+}
+
+section{
+padding:70px 8%;
+border-top:1px solid #3b2c12;
+}
+
+h3.section-title{
+font-size:32px;
+margin-bottom:30px;
+font-family:"Playfair Display",serif;
+}
+
+.menu-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:25px;
+}
+
+.menu-item{
+background:#12182a;
+border-radius:12px;
+overflow:hidden;
+transition:.3s;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.menu-item img{
+width:100%;
+height:160px;
+object-fit:cover;
+}
+
+.menu-content{
+padding:18px;
+}
+
+.menu-content h4{
+margin-bottom:6px;
+font-size:18px;
+}
+
+.menu-content p{
+font-size:14px;
+opacity:.75;
+}
+
+.menu-item:hover{
+transform:translateY(-6px);
+background:#18203a;
+}
+
+footer{
+text-align:center;
+padding:40px 8%;
+border-top:1px solid #3b2c12;
+font-size:14px;
+opacity:.8;
+}
+
+.fade-in{
+opacity:0;
+transform:translateY(30px);
+transition:all 1s ease;
+}
+
+.fade-in.visible{
+opacity:1;
+transform:translateY(0);
+}
+
+@media(max-width:800px){
+.hero-grid{grid-template-columns:1fr}
+.hero h2{font-size:36px}
+}
+
+</style></head><body><header>
+<h1>Midnight Corner Cafe</h1>
+<nav>
+<a href="#menu">Menu</a>
+<a href="#about">About</a>
+<a href="#visit">Visit</a>
+</nav>
+</header><section class="hero">
+<div class="hero-grid"><div>
+<h2>Coffee at the Quiet Corner</h2>
+<p>
+Warm lights, late conversations, and the calm of a city night. A cafe
+inspired by the quiet loneliness and beauty found in Edward Hopper's
+midnight diners.
+</p>
+<button onclick="scrollToMenu()">View Menu</button>
+</div><div class="special">
+<p>Open Late</p>
+<h3>Night Owl Special</h3>
+<p>Fresh espresso, butter croissants, and quiet jazz until 2 AM.</p>
+</div></div>
+</section><section id="menu">
+<h3 class="section-title">Menu</h3><div class="menu-grid"><div class="menu-item fade-in">
+<img src="espresso.jpg" alt="Espresso">
+<div class="menu-content">
+<h4>Espresso</h4>
+<p>Rich and bold single shot coffee.</p>
+</div>
+</div><div class="menu-item fade-in">
+<img src="cappuccino.jpg" alt="Cappuccino">
+<div class="menu-content">
+<h4>Cappuccino</h4>
+<p>Espresso with steamed milk foam.</p>
+</div>
+</div><div class="menu-item fade-in">
+<img src="latte.jpg" alt="Caramel Latte">
+<div class="menu-content">
+<h4>Caramel Latte</h4>
+<p>Smooth coffee with sweet caramel.</p>
+</div>
+</div><div class="menu-item fade-in">
+<img src="coldbrew.jpg" alt="Cold Brew">
+<div class="menu-content">
+<h4>Cold Brew</h4>
+<p>Slow steeped chilled coffee.</p>
+</div>
+</div><div class="menu-item fade-in">
+<img src="croissant.jpg" alt="Croissant">
+<div class="menu-content">
+<h4>Croissant</h4>
+<p>Fresh buttery flaky pastry.</p>
+</div>
+</div><div class="menu-item fade-in">
+<img src="muffin.jpg" alt="Blueberry Muffin">
+<div class="menu-content">
+<h4>Blueberry Muffin</h4>
+<p>Soft muffin with juicy blueberries.</p>
+</div>
+</div></div></section><section id="about">
+<h3 class="section-title">About</h3>
+<p>
+Midnight Corner Cafe is a place for quiet thinkers, students, travelers,
+and night wanderers. Inspired by classic American late‑night diners and
+the cinematic atmosphere of Edward Hopper paintings.
+</p>
+</section><footer id="visit">
+<p>123 Quiet Street · Open 6 PM – 2 AM</p>
+<p>© 2026 Midnight Corner Cafe</p>
+</footer><script>
+
+function scrollToMenu(){
+document.getElementById('menu').scrollIntoView({behavior:'smooth'});
+}
+
+const observer = new IntersectionObserver(entries => {
+entries.forEach(entry => {
+if(entry.isIntersecting){
+entry.target.classList.add('visible');
+}
+});
+});
+
+document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+</script></body>
+</html>
